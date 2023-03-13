@@ -1,4 +1,7 @@
-# template-python-project
+# template_python_project
+
+[![Tests & Checks](https://github.com/esynr3z/template_python_project/actions/workflows/test.yml/badge.svg)](https://github.com/esynr3z/template_python_project/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/template_python_project.svg)](https://badge.fury.io/py/template_python_project)
 
 Template repository for a new Python project
 
