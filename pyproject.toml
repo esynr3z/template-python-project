@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "template-python-project"
+version = "0.1.0"
+description = "Template repository for a new Python project"
+authors = ["esynr3z <esynr3z@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/esynr3z/template-python-project"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.2"
+black = "^23.1.0"
+flake8 = "^6.0.0"
+pytest-cov = "^4.0.0"
+isort = "^5.12.0"
+flake8-annotations = "^3.0.0"
+flake8-type-checking = "types-setuptools"
+mypy = "^1.1.1"
+tox = "^4.4.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
