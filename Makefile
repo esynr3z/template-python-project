@@ -18,12 +18,12 @@ clean:
 
 publish:
 	poetry config pypi-token.pypi ${TWINE_PASSWORD}
-    poetry build
-    poetry publish
+	poetry build
+	poetry publish
 
 format: setup-dev
 	poetry run isort format .
-    poetry run black .
+	poetry run black .
 
 test:
 	tox -e py
