@@ -1,6 +1,5 @@
 .PHONY: setup setup-dev install clean format check-format test lint type pre-commit
 
-PKG = template_python_project
 PYTHON_VERSION ?= 3.8
 
 setup:
@@ -17,12 +16,17 @@ install:
 clean:
 	rm -rf .tox .venv .mypy_cache **/__pycache__
 
+publish:
+	poetry config pypi-token.pypi ${TWINE_PASSWORD}
+    poetry build
+    poetry publish
+
 format: setup-dev
 	poetry run isort format .
     poetry run black .
 
 test:
-	tox -e py$(PYTHON_VERSION)
+	tox -e py
 
 lint:
 	tox -e lint
@@ -32,6 +36,3 @@ type:
 
 check-format:
 	tox -e checkformat
-
-pre-commit:
-	tox
