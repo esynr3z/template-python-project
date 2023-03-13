@@ -1,6 +1,6 @@
 .PHONY: setup setup-dev install clean format check-format test lint type pre-commit
 
-PYTHON_VERSION ?= 3.8
+PYTHON_VERSION ?= python3 # binary or version string, e.g. 3.8
 
 setup:
 	poetry env use $(PYTHON_VERSION)
