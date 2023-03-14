@@ -56,6 +56,8 @@ def apply_config(config: Project) -> None:
     replace_in_file(Path("pyproject.toml"), template.github_user, config.github_user)
     replace_in_file(Path("pyproject.toml"), template.github_repo, config.github_repo)
 
+    replace_in_file(Path("tox.ini"), template.name, config.name)
+
     replace_in_file(Path("README.md"), template.name, config.name)
     replace_in_file(Path("README.md"), template.github_user, config.github_user)
     replace_in_file(Path("README.md"), template.github_repo, config.github_repo)
