@@ -13,6 +13,8 @@ extend-ignore =
     ANN102,
     # TC001: Move application import into a type-checking block
     TC001,
+    # TC002: Move third-party import into a type-checking block
+    TC002
     # TC003: Move built-in import into a type-checking block
     TC003
 
